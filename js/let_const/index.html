@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      var name="hbz";
+      function dlName(){
+        //   函数局部作用域
+        //   函数运行时诞生
+        //   运行结束后回收
+          var dl ="xmm";
+          console.log(dl);
+      }
+      // 块级作用域
+      if(true){
+        const cxygls="zlc";
+      }
+      for(var i=0;i<10;i++){
+          console.log(i);
+          setTimeout(() => {
+              console.log("The number is"+i);
+          }, 1000);
+      }
+      console.log(cxygls);
+      console.log(name);
+    </script>
+</body>
+</html>

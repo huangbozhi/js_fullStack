@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>talk in js-代理模式</title>
+</head>
+<body>
+<script>
+    // object;
+    //描述的方式对象是怎样的就出来了；
+    //对象字面量 JSON Object;
+  const hbz = {
+    name:'黄博志',
+    age:21,
+    yz:99,
+    single:false,
+    hometown:'抚州',
+    rommId:1121,
+    sendFlower:function(target) {
+        target.receiveFlower(hbz);
+    }
+};
+  const mm={
+      name :"妙梅",
+      age:19,
+      mood:90,
+      receiveFlower:function(sender){
+        //   if(sender.yz<85){
+        //       console.log("收到了花，但是没空！");
+        //   }else{
+        //       console.log("备胎了解一下！");
+        //   }
+        if(mm.mood>80){
+          console.log(mm.name,"收到了花");
+        }else{
+            console.log(mm.name,"拒绝收花。");
+        }
+      },
+      listenGoodMood:function(){
+          //console.log("爸爸不想见你。");
+          setTimeout(function(){
+              mm.receiveFlower();
+              //console.log("本小姐心情变好了");
+          },3000)
+      }
+  };
+//   送花 A->B  A->C->B
+  const huahua={
+      name: "花花",
+      receiveFlower:function(sender){
+     /*   if(sender.name==="黄博志"){
+            console.log(hauhua.name,"收到",sender.name,"送的花");
+        } else{
+            mm.receiveFlower();
+        }*/
+        mm.listenGoodMood(function(){
+
+        })
+      },
+      sendFlower:function(sender){
+
+      }
+
+  };
+</script>
+</body>
+</html>
