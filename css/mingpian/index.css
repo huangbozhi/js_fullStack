@@ -1,0 +1,341 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    height: 100%;
+    width: 100%;
+}
+.userinfo{
+    /* border: 1px solid #000; */
+    width: 100%;
+    height: 45%;
+}
+.img-lay{
+    margin: 15px;
+    float: left;
+}
+.img-lay .img {
+    /* height: 40%; */ 
+    display: block;
+    background: url(./zyx.jpg) no-repeat;
+    height: 200px;
+    width: 345px;
+    background-size: cover;
+}
+.userinfo-name{
+    position: absolute;
+    padding-top: 0px;
+    font-size: 21px;
+}
+.userinfo-name:after{
+    content: "";
+    position: relative;
+    display: inline-block;
+    background: url(./sexm.png);
+    background-size: contain;
+    width: 21px;
+    height: 21px;
+}
+.userinfo-label{
+    height: 26px;
+    width: 100%; 
+    position: absolute;
+    padding-top: 12px;
+    display: block;
+    
+}
+.userinfo-label .label1 {
+    border: 1px solid #000;
+    float: left;
+    display: block;
+    height: 15px;
+    width: 60px;
+    position: relative;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: rgb(184, 17, 17);
+}
+.userinfo-label .label2{
+    border: 1px solid #000;
+    float: left;
+    display: block;
+    height: 15px;
+    width: 90px;
+    position: relative;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-left: 5px;
+    background-color: rgb(9, 91, 199);
+    
+}
+.userinfo-label .label3{
+    border: 1px solid #000;
+    float: left;
+    display: block;
+    height: 15px;
+    width: 60px;
+    position: relative;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-left: 5px;
+    background-color: rgb(206, 14, 72);
+}
+.userinfo-other{
+    /* border: 1px solid #000; */
+    margin-top: 70px;
+    height: 70px;
+    color:#b8b8b8;
+}
+.add{
+    float: left;
+    width: 35%;
+}
+.add::before{
+    content: '';
+    display: inline-block;
+    background: url(./dingwei.png);
+    background-size: cover;
+    width: 21px;
+    height: 21px;
+}
+.zhiye{
+    float: left;
+    width: 65%;
+}
+.zhiye::before{
+    content: '';
+    display: inline-block;
+    background: url(./zhiye.png);
+    background-size: contain;
+    width: 21px;
+    height: 21px;
+}
+.aihao{
+    float: left;
+    width: 35%;
+}
+.aihao::before{
+    content: '';
+    display: inline-block;
+    background: url(./aihao.png);
+    background-size: contain;
+    width: 21px;
+    height: 21px;
+}
+.wecht{
+    float: left;
+    width: 65%;
+}
+.wechat::before{
+    content: '';
+    display: inline-block;
+    background: url(./wechat.png);
+    background-size: contain;
+    width: 21px;
+    height: 21px;
+}
+.tel{
+    float: left;
+    width: 35%;
+}
+.tel::before{
+    content: '';
+    display: inline-block;
+    background: url(./tel.png);
+    background-size: contain;
+    width: 21px;
+    height: 21px;
+}
+.imgs{
+    position: relative;
+    /* border: 1px solid #000; */
+    float: left;
+    margin-left: 86%;
+    margin-top: -35%;
+}
+.img-leftone{
+    background: url(./erweima.png);
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    position: relative;
+
+}
+.img-lefttwo{
+    background: url(./hongbao.png);
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    margin-top: 35%;
+}
+
+
+.userinfo-aside{
+    /* border: 1px solid #000; */
+    height: 60%;
+    width: 100%;
+    position: relative;
+    top: 1px;
+}
+.p1{
+    position: relative;
+    top: -15px;
+}
+.weui-cell__hd{
+    padding-bottom: 10px;
+}
+.weui-cell__hd img{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #e5e5e5;
+    /* margin: 0 auto; */
+    border-radius: 50%;
+    display: block;
+   
+}
+.weui-cell__hd .radius1{
+    float: left;
+    margin-top: 10px;
+    margin-left: -15px;
+}
+.weui-cell__hd .radius2{
+    float: left;
+    margin-top: 10px;
+}
+.weui-cell__hd .radius3{
+    float: left;
+    margin-top: 10px;
+}
+.weui-cell__ft{
+    text-align: center;
+    color: #5d5d5d
+}
+.userinfo-next{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.userinfo-aside .provide{
+    border: 1px solid #f3f8fc;
+    position: relative;
+    top: -20px;
+}
+.provide h3{
+    border-left: 10px solid #37ab2f;
+}
+.userinfo-aside .needs{
+    border: 1px solid #f3f8fc;
+    position: relative;
+    top: -10px;
+}
+.needs h3{
+    border-left: 10px solid #48a6fd;
+}
+
+
+.userinfo-aside .advertisement{
+    border: 1px solid #f3f8fc;
+    background: url(./advertisement.jpg);
+    height: 80px;
+    width: 100%;
+    background-size: contain;
+    position: relative;
+    top: -5px;
+}
+
+.userinfo-aside .person-brand{
+    border: 1px solid #f3f8fc;
+    position: relative;
+    top: 0px;
+}
+.person-brand h3{
+    border-left: 10px solid #fb8800;
+}
+.person-brand .images{
+    width: 100%;
+    height: 70px;
+    border: 1px solid #f3f8fc;
+}
+.images .img-1{
+    float: left;
+    border: 0px solid #000;
+    background: url(./img-1.jpg) no-repeat;
+    width: 30%;
+    height: 100%;
+    background-size: contain;
+}
+.images .img-2{
+    float: left;
+    border: 0px solid #000;
+    background: url(./img-2.jpg) no-repeat;
+    width: 30%;
+    height: 100%;
+    background-size: contain;
+    margin-left: 5%;
+}
+.images .img-3{
+    float: left;
+    border: 0px solid #000;
+    background: url(./img-3.jpg) no-repeat;
+    width: 30%;
+    height: 100%;
+    background-size: contain;
+    margin-left: 5%;
+}
+
+.btn{
+    width: 100%;
+    height: 42px;
+    display: block;
+    
+    border: 1px solid #f3f8fc;
+    /* line-height: 48px; */
+    position: relative;
+}
+.btn-edit{
+    width: 50%;
+    height: 90%;
+    float: left;
+    border-radius: 22px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+.btn-edit a{
+    text-decoration: none;
+    margin-top: 2.5px;
+    margin-left: 50px;
+}
+.btn-edit a::before{
+    content: '';
+    display: inline-block;
+    background: url(./edit.png);
+    height: 18px;
+    width: 18px;
+    background-size: contain;
+    position: relative;
+    bottom: -3px;
+    left: -4px;
+}
+.btn-share{
+    width: 50%;
+    height: 90%;
+    float: left;
+    border-radius: 22px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+.btn-share a{
+    text-decoration: none;
+    margin-top: 2.5px;
+    margin-left: 15px;
+}
+
