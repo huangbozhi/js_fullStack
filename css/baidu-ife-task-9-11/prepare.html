@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+ li[class^="item"]{   /* 以什么开始的*/
+    color: blue;
+}  
+li[class$="m3"]{    /* 以什么结尾 */
+    color: red;
+}  
+li[class*="m3"]{
+    color: red;
+} 
+</style>
+<body>
+    <li class="item1">1</li>
+    <li class="item2">2</li>
+    <li class="item3">3</li>
+    <p class="item4">4</p>
+</body>
+</html>
