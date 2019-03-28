@@ -33,3 +33,7 @@
       有好用的对齐方式  align—items  纵轴
       对其 居中 justify-content 横轴
       在一堆子元素中，只给一个元素设置flex：1  这个元素成为主元素，其他元素占完组件该占的盒子模型后，余下的空间都交给主体元素。
+
+
+
+      link:: <link href="https://cdn.bootcss.com/weui/1.1.3/style/weui.css" rel="stylesheet">

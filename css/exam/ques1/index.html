@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            padding-top: 20px;
+            margin-top: 20px;
+            border: 2px solid aqua;
+        }
+
+        .box1 {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+</body>
+<script>
+var div1 = document.querySelector(".box1");
+// var width1 = window.getComputedStyle(div1).width;  
+// console.log(width1);
+var width_padding1 = window.getComputedStyle(div1).padding;  
+var widthall1 = div1.getBoundingClientRect().width; //求盒子总宽高
+var heightall1 = div1.getBoundingClientRect().height;
+console.log(widthall1+"px"+">"+heightall1+"px"+">"+width_padding1);
+var div2 = document.querySelector(".box2"); 
+// var width2 = window.getComputedStyle(div2).width; 
+// console.log(width2);
+var width_padding2 = window.getComputedStyle(div2).padding;  
+var widthall2 = div2.getBoundingClientRect().width;
+var heightall2 = div2.getBoundingClientRect().height;
+console.log(widthall2+"px"+">"+heightall2+"px"+">"+width_padding2);
+</script>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.bootcss.com/weui/1.1.3/style/weui.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+
+    .submits {
+        padding: 20px;
+    }
+
+    .info {
+        width: 100%;
+        border-collapse: collapse;
+        box-sizing: border-box;
+    }
+
+</style>
+
+<body>
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">姓名</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input name" type="text" placeholder="请输入姓名" value="123">
+            </div>
+        </div>
+
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">qq</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input qq" type="number" pattern="[0-9]*" placeholder="请输入qq号">
+            </div>
+        </div>
+        <div class="weui-cell weui-cell_vcode">
+            <div class="weui-cell__hd">
+                <label class="weui-label">手机号</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input tel" type="tel" placeholder="请输入手机号">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label for="" class="weui-label">日期</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input data" type="date" value="">
+            </div>
+        </div>
+
+        <div class="submits">
+            <a href="javascript:;" class="weui-btn weui-btn_primary" id="submits">提交</a>
+        </div>
+
+        <table class="info">
+            <tr>
+                <th>姓名</th>
+                <th>qq</th>
+                <th>手机号</th>
+                <th>生日</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <script>
+          const name1 = document.querySelector('.name');
+          console.log(name1);
+        const name = document.querySelector('.name').value;
+        const qq = document.querySelector('.qq').value;
+        const tel = document.querySelector('.tel').value;
+        const data = document.querySelector('.data').value;
+        const btnSubmit = document.getElementById('submits');
+        const info = document.querySelector('.info');
+
+        btnSubmit.addEventListener('click', () => {
+            console.log(name);
+            
+            let table = '<tr>' +
+                '<td>' + name + '</td>' +
+                '<td>' + qq + '</td>' +
+                '<td>' + tel + '</td>' +
+                '<td>' + data + '</td>' +
+                '</tr>'
+            console.log(table)
+            let opTr = document.createElement('tr');
+            let opTd = document.createElement('td');
+            // info.innerHTML = table;
+            for (let i = 0; i < 4; i++) {
+                opTr.appendChild(opTd);
+            }
+            info.appendChild(opTr);
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tbody id="tbody">
+            <tr>
+                <td>name</td>
+                <td>age</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        const tbody = document.getElementById('tbody');
+        const person = {
+            name: 'xmm',
+            age: 18,
+            sex: 'w',
+            keywords: ['sing','game']
+        }
+        const people = [
+            {name:'hbz',age:20},
+            {name:'xmm',age:18}
+        ]
+        const arrHTMLContent = people.map(function(people){
+            return `<tr><td>${people.name}</td>
+                <td>${people.age}</td></tr>`
+        })
+        const htmlcontent = arrHTMLContent.join('');
+        tbody.innerHTML = htmlcontent;
+        console.log(arrHTMLContent);
+        
+        // let str = '<tr><td>'+person.name+'</td><td>'+person.age+'</td></tr>';
+        // let str = `<tr>
+        //         <td>${person.name}</td>
+        //         <td>${person.age}</td>
+        //         <td>${person.sex === 'w' ? '女':'男'}</td>
+        //         <td>${renderKeysWord(person.keywords)}</td>
+        //         <td>${100+100}</td>
+        //         <td>${'学习'+2+'模板字符串'}</td>
+        //         <td>\`${"\`"}</td>
+        //     </tr>`
+        // tbody.innerHTML = str;
+        function renderKeysWord(arr){
+            return arr.map(keywords=>{
+                return `<li>${keywords}</li>`
+            })
+            .join('')
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body, html{
+    height: 100%;
+    width: 100%;
+}
+.mao-body{
+    background: url(../cat/maoshenti.png);
+    height: 201px;
+    width: 117px;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* vertical-align: top; */
+    transform: translate(-50%,-50%);
+}
+.mao-zhua{
+    background: url(../cat/maozhua.png);
+    width: 34px;
+    height: 81px;
+    background-size: contain;
+    position: absolute;
+    bottom: -72px;
+    left: 60px;
+    animation: zhua 2s ease-in-out infinite;
+    transform-origin: 60% 4%;
+}
+@keyframes zhua{
+    0%{
+        transform: rotate(-20deg);
+    }
+    50%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(-10deg);
+    }
+}
+.mao-yan1{
+    background: url(../cat/maoyan1.png);
+    height: 3px;
+    width: 3px;
+    position: absolute;
+    transform: translate(72px,172px);
+}
+.mao-yan2{
+    background: url(../cat/maoyan2.png);
+    height: 3px;
+    width: 3px;
+    position: absolute;
+    transform: translate(90px,180px);
+}
+.mao-zui{
+    background: url(../cat/maozui.png);
+    width: 4px;
+    height: 3px;
+    position: absolute;
+    transform: translate(77px, 184px);
+}
+.mao-wei{
+    
+    width: 64px;
+    height: 194px;
+    background: url(../cat/maowei.png);
+    position: absolute;
+    top: -185px;
+    left: -8px;
+    transform-origin: 40% 96%;
+    animation: weiba 2s ease-in-out infinite;
+    
+}
+@keyframes weiba{
+    0%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(-5deg);
+    }
+}
