@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>arrow-this</title>
+</head>
+<body>
+    <script>
+        const xmm = {
+            msg: 'this is xmm'
+        } 
+        const hbz = {
+            msg: 'this is hbz'
+        }
+        function xmm_func(){
+            // console.log(this);
+            // console.log(this.msg);
+            var arrow_xmm_fuunc = ()=>{
+            console.log(this);
+            console.log(this.msg);
+        }
+        arrow_xmm_fuunc();
+        }   
+        // 
+        xmm_func.call(hbz);
+        
+
+        // var arrow_xmm_fuunc = ()=>{
+        //     console.log(this);
+        //     console.log(this.msg);
+        // }
+        // arrow_xmm_fuunc(xmm.msg);
+    </script>
+</body>
+</html>

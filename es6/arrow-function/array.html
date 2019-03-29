@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const ages =[
+            { name: 'xmm' ,age:18 },
+            { name: 'hbz' ,age:20 },
+            { name: 'xmm1' ,age:19 },
+            { name: 'hbz1' ,age:20 },
+        ]
+        // const ages = [18,20,30,40,10]; 
+        const this_age = ages.find((person)=>{ 
+             return person.age === 20
+        });
+        const this_age_index = ages.findIndex((person)=>{ 
+            return person.age === 20
+        });
+        console.log(this_age);
+        console.log(this_age_index);
+    </script>
+</body>
+</html>
