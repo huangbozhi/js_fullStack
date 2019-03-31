@@ -1,0 +1,1 @@
+cursor: pointer;  鼠标停留模式为手指形状

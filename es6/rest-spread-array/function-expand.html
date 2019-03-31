@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>function-expand</title>
+</head>
+
+<body>
+    <script>
+        // es6 对函数的扩展
+        function Person(nickName){
+            // es5
+            // if(!nickName) {
+            //     nickName = "未知昵称"
+            // }
+            this.nickName = nickName ||'未知昵称        ';
+        }
+
+        const p1 = new Person('nickName');
+        const p2 = new Person();
+        // 位置昵称
+
+
+        // rest 参数 形式(...变量名)
+        // Rest parameter must be last
+        function sum(a,...args){
+            console.log(args);
+            // Array.form()
+            console.log(arguments);
+        }
+        sum(2,4,6,8);
+    </script>
+</body>
+
+</html>

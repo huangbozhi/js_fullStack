@@ -26,6 +26,15 @@ body{
 ul,li{
     list-style: none;
 }
+/* h1{
+    display: inline-block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+} */
 .anony-nav .anony-nav-links li{
     display: inline-block;
     zoom: 1;
@@ -81,3 +90,72 @@ a {
     width: 42px;
     background-position: -421px 0;
 }
+.anony-nav h1{
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    width: 160px;
+    height: 34px;
+    margin: 0 20px 0 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: normal;
+    background: url(./images/logo_db.png) no-repeat 0 0;
+    overflow: hidden;
+}
+.anony-nav h1 a{
+    display: block;
+    height: 34px;
+    line-height: 10em;
+}
+.anony-nav .anony-srh{
+    position: relative;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    width: 270px;
+    height: 30px;border: 1px solid #c3c3c3;
+}
+form{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.anony-nav .anony-srh .inp{
+    display: block;
+    height: 30px;
+    overflow: hidden;
+}
+input{
+    margin-left: 3px;
+    vertical-align: middle;
+    font-size: 12px;
+}
+.anony-nav .anony-srh .inp input{
+    width: 240px;
+    border: none;
+    font-size: 13px;
+    height: 20px;
+    padding: 5px;
+}
+.anony-nav .anony-srh .bn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    background: url(./images/bn_srh_1.png) 50% 50% no-repeat;
+}
+.anony-nav .anony-srh .bn input{
+    border: none;
+    background: transparent;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+}
+
