@@ -37,3 +37,5 @@
 
 
       link:: <link href="https://cdn.bootcss.com/weui/1.1.3/style/weui.css" rel="stylesheet">
+
+      弹性布局：<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
