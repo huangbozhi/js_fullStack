@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>司徒正美</title>
+    <style>
+      *{
+          margin: 0;
+          padding: 0;
+      }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+      // 浏览器的页面渲染机制
+      // DOM Ready 事件
+      function JQueryEle(ele){
+        this.ele = ele;
+      }
+      JQueryEle.prototype.html = function(str){
+        this.ele.innerHTML = str;
+      }
+    const JQuery = {}; //命名空间  框架名字叫JQuery
+    JQuery.wrapper = function(ele){
+        // ele querySelector  innerHTML  没有html
+        // 将ele对象封装于此
+        // jquery里的节点对象，不是简单的html节点，而是一个jquery对象
+        const jqueryEle = new JQueryEle(ele);
+        return jqueryEle;
+    }
+      function $(selector){
+        if(typeof selector === 'function'){
+            document.addEventListener('DOMContentLoaded',selector)
+        }else if(typeof selector === 'string'){
+            // html()
+            // $ prototype html X
+            // $() 是一个函数 运行结果,  类型  prototype方法
+            const ele = document.querySelector(selector);
+            console.log(ele);
+            if(ele){
+                // 推论能力
+                return JQuery.wrapper(ele);
+            }
+            // return ele;
+        }
+      }
+      $(function(){
+        console.log('DOM Ready');
+        $('#root').html('<p>我要去云南，我要去越南!</p>')
+      })
+    </script>
+</body>
+</html>
