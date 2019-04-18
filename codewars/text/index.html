@@ -10,13 +10,99 @@
 
 <body>
   <script>
-    function digPow(n,p){
-      var length = n.length;
-      var arr = n.split('');
-      console.log(arr);
-    }
-    console.log(digPow(555,1));
-    
+    // function digPow(n,p){
+    //   var length = n.length;
+    //   var arr = n.split('');
+    //   console.log(arr);
+    // }
+    // console.log(digPow(555,1));
+    // function maxLength(str){
+
+    // }
+    /**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number}
+ */
+    var findMedianSortedArrays = function (nums1, nums2) {
+      var mid1,mid2;
+      var l1 = nums1.length,l2 = nums2.length;
+      if (l1 % 2 == 0) {
+        console.log(l1 >> 1);
+        mid1 = (nums1[l1 >> 1] + nums1[(l1 >> 1) - 1]) / 2.0;
+      } else {
+        mid1 = nums1[l1 >> 1];
+      }
+      if (l2 % 2 == 0) {
+        console.log(l2 >> 1);
+        mid2 = (nums2[l2 >> 1] + nums2[(l2 >> 1) - 1]) / 2.0;
+      } else {
+        mid2 = nums2[l2 >> 1];
+      }
+      return (mid1+mid2)/2.0;
+
+
+
+      // var arr = [...nums1, ...nums2];
+      // arr = sort(arr);
+      // console.log(arr);
+
+      // const l = arr.length;
+      // if (l % 2 == 0) {
+      //   console.log(l >> 1);
+      //   mid = (arr[l >> 1] + arr[(l >> 1) - 1]) / 2.0;
+      // } else {
+      //   mid = arr[l >> 1];
+      // }
+      // return mid;
+    };
+
+    /**
+     * @param {number[]} arr
+     * @return {number}
+     */
+
+    // function sort(arr) {
+    //   const l = arr.length;
+    //   for (var i = 0; i < l; i++) {
+    //     for (var j = i; j < l; j++) {
+    //       if (arr[j] < arr[i]) {
+    //         var t = arr[j];
+    //         arr[j] = arr[i];
+    //         arr[i] = t;
+    //       }
+    //     }
+    //   }
+    //   return arr;
+    // }
+
+    /**
+     * @param {number[]} arr
+     * @return {number}
+     */
+// function median1(arr){
+//     var min,max,mid;
+//     var length= arr.length;
+//     var f= length>>1;
+//     if(length % 2 == 0){
+//         for(var i = 0;i<f;i++){
+//            min = Math.min(...arr);
+//            arr.remove(min);
+//             if(i+1 === f){ max = Math.min(...arr) }
+//         } 
+//         mid = (min+max) / 2.0;
+//     }else{
+//         for(var i=0;i<=f;i++){
+//             min = Math.min(...arr);
+//             arr.remove(min);
+//         }
+//         mid = min;
+//     }
+//     return mid;
+// }
+
+
+
   </script>
 </body>
 
