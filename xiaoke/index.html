@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <script>
+    let arr = [1,2,3,4,5];
+    function res(num){
+      let s = num.toString();
+      let a = [];
+      for(let i = 0;i<s.length;i++){
+        a.unshift(s[i]);
+      }
+      return a.join('-');
+    }
+    var a = res(arr);
+    console.log(a);
+    
+  </script> -->
+
+  <script>
+    function minNumer(numbers){
+      numbers.sort(compare);
+      let res = '';
+      for(var i = 0;i<numbers.length;i++){
+        res += numbers[i];
+      }
+      return res;
+    }
+    function compare(a,b){
+      let str1 = a + '' + b;//21 34
+      let str2 = b + '' + a;//34 21
+      // console.log(str1,str2)
+      for(var i =0;i<str1.length;i++){
+        if(str1.charAt(i)>str2.charAt(i)){
+          return 1;
+        }
+        if(str1.charAt(i)<str2.charAt(i)){
+          return -1;
+        }
+      }
+      // return true;
+    }
+    // compare(12,23)
+    // console.log(minNumer([12,23,13]));
+    let arr=[1,5,3];
+    function abc(a,b){
+      return true
+    }
+    // console.log(arr.sort(-1));
+    // console.log(arr.sort(1));
+    console.log(arr.sort(abc));
+    
+  </script>
+
+</body>
+
+</html>

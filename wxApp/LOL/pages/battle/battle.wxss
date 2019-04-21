@@ -1,0 +1,29 @@
+.pages-battle{
+    border: 1px solid #00f;
+}
+.pages{
+    width: 100%;
+    height: 120px;
+    border: 1px solid #f00;
+    margin-top:10px;
+}
+/* .pages:not(:first-chlid){
+  border: 3px solid gray; 
+  position: absolute;
+  margin-top: -50px;
+} */
+.textTil{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+.textBg{
+    width: 100%;
+    height: 90px;
+    /* border: 1px solid #000; */
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 2em;
+    text-align: center;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,11 @@
+<view class="pages-battle">
+    <block wx:for="{{battle}}">
+        <!-- <view class="image-section">
+            <!-- <image style="width:80px;height:80px;background-color:#eee" mode="aspectFit" src="{{item.src}}" /> 
+        </view> -->
+        <view class="pages">
+            <text class="textTil">{{item.name}}:</text>
+            <text class="textBg">{{item.src}}</text>
+        </view>
+    </block>
+</view>
