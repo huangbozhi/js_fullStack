@@ -1,5 +1,7 @@
 const request = require('request');
-const cheerio = require('cheerio')
+const cheerio = require('cheerio');
+var Iconv = require('iconv-lite');
+var iconv = new Iconv('GBK', 'UTF-8');
 
 function a(){
     request("https://www.smzdm.com/youhui/", (err, res) => {
@@ -33,8 +35,9 @@ function b(){
         console.log(err)
       } 
       if(!err){
-        // console.log(res.body)
-        const $ = cheerio.load(res.body, {
+        var result = iconv.convert(new Buffer(res.body, 'binary')).toString();
+        console.log(res.body)
+        const $ = cheerio.load(result, {
             decodeEntities: false
         })
         console.log(res.body)
@@ -46,27 +49,31 @@ function b(){
     })
 }
 b()
-var iconv = require('iconv-lite')
-request({
-  url,
-  encoding: null
-}, (err, res) => {
-  if (err) {
-    // reject(err)
-    console.log(err)
-  }
-  if (!err) {
-    const body = iconv.decode(res.body, 'gbk');
-    const $ = cheerio.load(body, {
-      decodeEntities: false
-    })
-    console.log(body);
-    $('.clearfix.mod-list.rec-video').each(function () {
-      const a = $('.mod-item .figure', this).attr('href');
-      console.log(a)
-    })
-  }
-})
+
+
+function c(){
+    request({
+    url,
+    encoding: null
+  }, (err, res) => {
+    if (err) {
+      // reject(err)
+      console.log(err)
+    }
+    if (!err) {
+      const body = iconv.decode(res.body, 'gbk');
+      const $ = cheerio.load(body, {
+        decodeEntities: false
+      })
+      console.log(body);
+      $('.clearfix.mod-list.rec-video').each(function () {
+        const a = $('.mod-item .figure', this).attr('href');
+        console.log(a)
+      })
+    }
+  })
+}
+
 
 
 
