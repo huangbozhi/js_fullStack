@@ -15,7 +15,7 @@ const partition = (head, x) => {
     next = cur.next;
     cur.next = null; // 打掉以前的关系 
     if (cur.val < x) {
-      if (!preHead) { //空链表
+      if (!preHead) { //空链表.
         preHead = cur;
         preTail = cur;
       } else {
