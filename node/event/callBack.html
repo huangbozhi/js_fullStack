@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function comeTo (preson, thing, cb) {
+      let msg = `找${preson}${thing}, 城区钢枪，飞黄腾达`;
+      if(preson === 'hl') {
+        cb(null, msg)
+      }else {
+        cb({err: 'invalid name'}, null);
+      }
+      
+    }  
+    // cb callBack
+    comeTo('hl', 'chicken', (err, msg) => {
+      console.log(err)
+      console.log(msg);
+      // msg -> 找hlchicken，城区钢枪，飞黄腾达
+    })
+  </script>
+</body>
+</html>
